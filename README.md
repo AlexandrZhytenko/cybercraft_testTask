@@ -1,4 +1,7 @@
 # cybercraft_testTask
+
+run view.py and program will Running on http://127.0.0.1:5000/
+
 Before run you must:
 1) have python or download from https://www.python.org/downloads/
 In terminal do:
