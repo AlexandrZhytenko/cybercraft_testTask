@@ -1,0 +1,32 @@
+The main tools which were used:
+
+Python
+Is an interpreted high-level programming language for general-purpose programming.
+https://www.python.org/
+ 
+Flask
+Is a microframework for Python.
+http://flask.pocoo.org/
+
+sqlite3
+It is an interface for SQLite databases which is SQLite is a C library that provides
+a lightweight disk-based database that doesn’t require a separate server process and
+allows accessing the database using a nonstandard variant of the SQL query language.
+https://docs.python.org/2/library/sqlite3.html?highlight=sqlite3#sqlite3-types
+
+pandas
+Is an open source, BSD-licensed library providing high-performance, easy-to-use data
+structures and data analysis tools for the Python programming language.
+https://pandas.pydata.org/
+
+matplotlib
+Matplotlib is a Python 2D plotting library which produces publication quality figures
+in a variety of hardcopy formats and interactive environments across platforms.
+https://matplotlib.org/
+
+csv
+This Python module implements classes to read and write tabular data in CSV format.
+https://docs.python.org/2/library/csv.html?highlight=csv#module-csv
+
+
+

@@ -1,0 +1,86 @@
+{% extends	"template.html"	%}
+{%	block	content	%}
+    <h2>Task:</h2>
+    <p>
+        Build history for a project over the course of several months,
+        includes overall build times and status
+    </p>
+    <h3>1. To implement charting app:</h3>
+    <h4>
+        Passing and failing builds per day, stacked-chart.
+        Use columns "created_at" and "summary status"
+    </h4>
+    <p>Result:</p>
+    <img src="{{ url_for('static',filename='passing_failing.png')}}" width="600" height="400" alt="passing-falling">
+    <div>
+        <h4>The total results are:</h4>
+        {% for row in data_count %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+    {% endfor %}
+    </div>
+    <h4>
+        Build duration vs. time. Use columns "duration" and "created_at".
+    </h4>
+    <p>Result:</p>
+    <img src="{{ url_for('static',filename='duration_time.png')}}" width="600" height="400" alt="duration_time">
+    <h3>2. Highlight Outliers</h3>
+    <p>
+        Extend the app from (1) to annotate days in the chart that have an "abnormal" number of failing builds.
+        Define (and justify) how you are determining "abnormal".
+    </p>
+    <h4>The days where test was failed:</h4>
+    <div>
+        <table>
+            <tr>
+                <th>session_id</th>
+                <th>created_at</th>
+                <th>summary_status</th>
+            </tr>
+        {% for row in rows_failed %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    <h4>The days where test was stopped:</h4>
+    <div>
+        <table>
+            <tr>
+                <th>session_id</th>
+                <th>created_at</th>
+                <th>summary_status</th>
+            </tr>
+        {% for row in rows_stopped %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    <h4>The days where test was error:</h4>
+    <div>
+        <table>
+            <tr>
+                <th>session_id</th>
+                <th>created_at</th>
+                <th>summary_status</th>
+            </tr>
+        {% for row in rows_error %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+{%	endblock %}

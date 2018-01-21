@@ -1,5 +1,4 @@
-import csv
-import sqlite3
+import csv, sqlite3
 
 con = sqlite3.connect("session_history.db")
 cur = con.cursor()
