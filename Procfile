@@ -1,1 +1,1 @@
-web: view:app
+web: guincorn view:app
