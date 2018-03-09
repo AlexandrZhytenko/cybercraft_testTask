@@ -1,18 +1,10 @@
 # cybercraft_testTask
+You can see the result here https://taskcybercraft.herokuapp.com/
 
-run view.py and program will Running on http://127.0.0.1:5000/
+The task was tachnical interview for http://www.cybercraftinc.com/.
 
-Before run you must:
-1) have python or download from https://www.python.org/downloads/
-In terminal do:
-1) pip install flask
-2) pip install matplotlib
-3) pip install pandas
-
-The task is:
 # Data Viz Programming Exercise
-
-session_history.csv 	- Build history for a project over the course of several months, includes overall build times and status
+Build history for a project over the course of several months, includes overall build times and status
 
 1. To implement charting app:
 
